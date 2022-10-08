@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <h1>Muhammad Dwi Susanto</h1>
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <!-- hero section -->
+      <div class="hero__section">
+        <div class="hero__wrapper">
+          <div class="column__left">
+            <span>01 - Muhammad Dwi Susanto</span>
+            <h1>Back End Developer</h1>
+            <p>
+              I have years of expereience working with small and large companies
+              and I'm currently looking for the next opportunity.
+            </p>
+          </div>
+          <div class="column__right">
+            <div class="img-main">
+              <img src="./img/profile.png" alt="face" class="main__img" />
+            </div>
+            <div class="social-media">
+              <p>Check Out My:</p>
+              <img src="img/gihub.png" onclick="location.href='https:/\/www.github.com/mdwisu'" alt="github" />
+              <img src="img/twitter.png" onclick="location.href='https:/\/www.twitter.com/MDwis_'" alt="twitter" />
+              <img src="img/akar-icons_instagram-fill.png" onclick="location.href='https:/\/www.instagram.com/dwims_'" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

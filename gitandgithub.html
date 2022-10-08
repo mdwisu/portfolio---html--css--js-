@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Detail Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>detail blogs</h1>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>Git and GitHub</h1>
+        <div class="main__content">
+          <script
+            type="module"
+            src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+          ></script>
+
+          <zero-md>
+            <script type="text/markdown">
+              ## `Pengenalan Git`
+
+              Git adalah aplikasi yang dapat melacak setiap perubahan yang terjadi pada suatu folder atau file.
+
+              ## `Instalasi Git`
+
+              Download dan install GIT seperti halnya instal aplikasi pada umumnya
+              [disini](https://git-scm.com 'https://git-scm.com/')
+
+              ### Setup Awal
+
+              ```
+              $ git config --global user.name "John Doe"
+              $ git config --global user.email johndoe@example.com
+              ```
+
+              > WARNING: email yang disetup HARUS SAMA dengan yang digunakan pada GITHUB
+
+              ### cek setup apakah berhasil
+
+              ```
+              $ git config --list
+              ```
+
+              ## `Repository Git`
+
+              Repository adalah direktori proyek yang kita buat
+
+              - #### git init<br>
+
+              ```
+              $ git init <nama_folder_repository>
+              ```
+
+              atau gunakan
+
+              ```
+              $ git init .
+              ```
+
+              jika anda sudah berada dalam folder yang diinginkan atau sudah anda dibuat
+
+              - #### git status<br>
+
+              ```
+              $ git status
+              ```
+
+              maka akan muncul seperti gambar di bawah
+
+              ![Illustration to use for new users](img/git-status.jpg)
+
+              kondisi pada status
+
+              - untracked
+              - unmodified
+              - modified -> kondisi dimana revisi atau perubahan sudah dilakukan, tetapi belum ditandai (untracked) dan belum disimpan dalam version control
+              - staged -> kondisi dimana revisi sudah ditandai (modified) namun belum disimpan di version control
+              - commited -> dimana revisi sudah disimpan pada version control
+              - #### git add<br>
+                menambahkan file spesifik yang diedit ke staging area
+
+              ```
+              $ git add <nama_file>
+              ```
+
+              menambahkan semua file yang diedit ke staging area
+
+              ```
+              $ git add .
+              ```
+
+              - #### git commit<br>
+                save perubahan di staging area pada version control
+
+              ```
+              $ git commit -m "<comment>"
+              ```
+
+              - #### git log<br>
+                melihat catatan log dari revisi-revisi
+
+              ```
+              $ git log
+              ```
+
+              melihat lebih sederhana
+
+              ```
+              $ git log --oneline
+              ```
+
+              berdasarkan nomor version
+
+              ```
+              $ git log <nomor_version>
+              ```
+
+              berdasarkan nama file
+
+              ```
+              $ git log <nama_file>
+              ```
+
+              berdasarkan author
+
+              ```
+              $ git log --author='<name_author>'
+              ```
+
+              > Jika perubahan yang sedang dilakukan terjadi kesalahan dan kita ingin mengembalikan keadaan seperti sebelumnya maka itu bisa dilakukan :) caranya dibawah inii
+
+              - #### git checkout<br>
+                mengambil file atau membatalkan perubahan suatu file sebelum staged atau commited
+
+              ```
+              $ git checkout <nama_file>
+              ```
+
+              kembali ke commit terentu dengan nomor commit
+
+              ```
+              $ git checkout <no_commit> <optional_name_file_if_spesific>
+              ```
+
+              > gunakan git log untuk melihat nomor commit
+
+              mengembalikan commit jauh ke bawah. Misal kita ingin kembali pada 3 commit sebelumnya
+
+              ```
+              $ git checkout HEAD~3 index.html
+              ```
+
+              checkout with create a new branch
+
+              ```
+              $ git checkout -b <name_branch> <branch_to_create_new_one>
+              ```
+
+              - #### git reset<br>
+                mereset commit
+
+              ```
+              $ git reset <hash>
+              ```
+
+              - #### git revert<br>
+                me-remove commit tertentu dengan membuat commit baru
+
+              ```
+              $ git revert <hash>
+              ```
+
+              - #### git branch<br>
+                to see the list of branches
+
+              ```
+              git branch
+              ```
+
+              to create a new branch
+
+              ```
+              git branch <name_branch>
+              ```
+
+              move to a certain branch
+
+              ```
+              git branch <name_branch>
+              ```
+
+              to delete a branch
+
+              ```
+              git branch -d <name_branch>
+              ```
+
+              - #### git merge<br>
+                to merge a branch
+
+              ```
+              git merge <name_branch>
+              ```
+
+              > note: recommend to be on branch main
+
+              ## `Github Publish and clone`
+
+              - #### github publish<br>
+              - buka akun github di browser
+              - klik new seperti di gambar
+                ![Illustration to use for new users](img/github.jpg)
+              - isikan settingan yang diinginkan
+              - klik create repository seperti digambar
+                ![Illustration to use for new users](img/github2.jpg)
+              - setelah itu akan muncul quick setup dari github seperti digambar
+                ![Illustration to use for new users](img/github3.jpg)
+              - ketikan script untuk menambahkan remote untuk terhubung ke github pada terminal bash atau yang lain
+
+              ```
+              $ git remote add origin https://github.com/mdwisu/test.git
+              ```
+
+              - pindah ke branch main
+
+              ```
+              $ git branch -M main
+              ```
+
+              - setelah di edit, dapat melakukan push ke github
+
+              ```
+              $ git push -u origin main
+              ```
+
+              - #### github clone<br>
+              - untuk melakukan clone, dapat mengakses github oranglain yang ingin di clone
+              - klik code seperti di gambar
+              - lalu copy url HTTPS
+                ![Illustration to use for new users](img/github_clone.jpg)
+              - buka git bash lalu ketikan script berikut
+
+              ```
+              git clone <url HTTPS>
+              ```
+
+              - dan repository telah berhasil di clone
+
+              ---
+
+              ---
+            </script>
+          </zero-md>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <h1>Muhammad Dwi Susanto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li class="active"><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="blogs">
+      <h1
+        style="
+          font-size: 50px;
+          width: 100%;
+          margin-top: 30px;
+          text-align: center;
+        "
+      >
+        My Blogs
+      </h1>
+      <div class="blog" id="link-blog">
+        <h1>Unix Command Line</h1>
+        <h5 class="ucl">View Detail Info</h5>
+      </div>
+      <div class="blog" id="link-blog">
+        <h1>Git and Github</h1>
+        <h5 class="git">View Detail Info</h5>
+      </div>
+      <div class="blog" id="link-blog">
+        <h1>HTML</h1>
+        <h5 class="html">View Detail Info</h5>
+      </div>
+      <div class="blog" id="link-blog">
+        <h1>CSS</h1>
+        <h5 class="css">View Detail Info</h5>
+      </div>
+      <div class="blog" id="link-blog">
+        <h1>Javascript Dasar</h1>
+        <h5 class="js">View Detail Info</h5>
+      </div>
+      <div class="blog" id="link-blog">
+        <h1>Javascript Intermediate</h1>
+        <h5 class="js2">View Detail Info</h5>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

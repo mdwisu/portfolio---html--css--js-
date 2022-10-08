@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Detail Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>detail blogs</h1>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>Javascript Intermediate</h1>
+        <div class="main__content">
+          <script
+            type="module"
+            src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+          ></script>
+
+          <zero-md>
+            <script type="text/markdown">
+              ## 1. Javascript Scope
+
+              - Scope adalah konsep dalam flow data variabel.
+              - Menentukan suatu variabel bisa diakses pada scope tertentu atau tidak.
+
+              ### Blocks
+
+              - Blocks adalah code yang berada didalam curly braces {}.
+              - Conditional, function, dan looping menggunakan blocks.
+
+              ### Global Scope
+
+              - Global scope berarti variabel yang kita buat dapat diakses dimanapun dalam suatu file.
+              - Agar menjadi Global Scope, suatu variabel harus dideklarasikan diluar Blocks.
+
+              ### Local Scope
+
+              - Local scope berarti kita mendeklarasikan variabel didalam blocks seperti function, conditional, dan looping.
+              - Maka variabel hanya bisa diakses didalam blocks saja. Tidak bisa diakses diluar blocks.
+
+              ## 2. Javascript Function
+
+              Function adalah sebuah blok kode dalam sebuah grup untuk menyelesaikan 1 task/1 fitur.
+
+              ### membuat function
+
+              ```js
+              function greeting() {
+                return 'Hello World';
+              }
+              ```
+
+              ### memanggil function
+
+              ```js
+              greeting();
+              console.log(greeting());
+              ```
+
+              ### parameter argument
+
+              - parameter
+
+              ```js
+              function penambahan(a, b) {
+                return a + b;
+              }
+              ```
+
+              - argument
+
+              ```js
+              console.log(penambahan(5, 10));
+              ```
+
+              ### default parameter
+
+              Default paramaters digunakan untuk memberikan nilai awal/default pada parameter function.
+
+              ```js
+              function greetOnWebsite(nama = 'John Doe') {
+                return nama;
+              }
+              ```
+
+              ### default parameter
+
+              Kita bisa menggunakan function yang sudah dibuat pada function lain.
+
+              ```js
+              function multiplyByNineFifths(number) {
+                return number * (9 / 5);
+              }
+              function getFahrenheit(celsius) {
+                return multiplyByNineFifths(celsius) + 32;
+              }
+              getFahrenheit(15); // Returns 59
+              ```
+
+              ### arrow function
+
+              Arrow function adalah cara lain menuliskan function. Ini adalah fitur terbaru yang ada pada ES6 (Javascript Version)
+
+              ```js
+              const greeting = () => {
+                return 'Hello world';
+              };
+              ```
+
+              ### Short Syntax Function
+
+              ```js
+              // nol parameters
+              const functionName = ( ) = > { } ;
+              // satu parameter
+              const functionName = paramOne = > { } ;
+              // 2 atau lebih parameter
+              const functionName = ( paramone , paramTwo ) = > { } ;
+              ```
+
+              ### JavaScript error messages && debugging
+
+              - untuk mengetahui error anda dapat membaca pesan message tentunya harus megerti bahasa inggris, atau mengcopy error message ke browser
+
+              - melakukan console.log untuk mengecek suatu variable atau fungsi
+
+              - menghapus sedikit demi sedikit codingan anda untuk mengetahui letak dimana error tersebut berada
+
+              ## 3. JavaScript data types and data structures
+
+              ### Dynamic and weak typing
+
+              JavaScript adalah bahasa dinamis dengan tipe dinamis. Variabel dalam JavaScript tidak secara langsung terkait dengan jenis nilai tertentu, dan variabel apa pun dapat diberi (dan ditetapkan ulang) nilai dari semua jenis:
+
+              ```js
+              let foo = 42; // foo is now a number
+              foo = 'bar'; // foo is now a string
+              foo = true; // foo is now a boolean
+              ```
+
+              JavaScript juga merupakan bahasa yang diketik dengan lemah, yang berarti memungkinkan konversi tipe implisit saat operasi melibatkan tipe yang tidak cocok, alih-alih melempar kesalahan tipe.
+
+              ```js
+              const foo = 42; // foo is a number
+              const result = foo + '1'; // JavaScript memaksa foo ke string, sehingga dapat digabungkan dengan operan lainnya
+              console.log(result); // 421
+              ```
+
+              ### JavaScript types
+
+              Himpunan tipe dalam bahasa JavaScript terdiri dari: Primitive Value dan objects
+
+              #### Primitive Value
+
+              - [Boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#boolean_type)
+              - [Null type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#null_type)
+              - [Undefined type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#null_type)
+              - [Undefined type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#undefined_type)
+              - [Number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#number_type)
+              - [BigInt type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#bigint_type)
+              - [String type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#string_type)
+              - [Symbol type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#symbol_type)
+
+              #### Objects
+
+              Dalam ilmu komputer, objek adalah nilai dalam memori yang mungkin dirujuk oleh pengenal.
+
+              - [properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#properties)
+                - [Data property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#data_property)
+                - [Accessor property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#Accessor_property)
+              - ["Normal" objects, and functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#normal_objects_and_functions)
+              - [Dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#dates)
+              - [Indexed collections: Arrays and typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#indexed_collections_arrays_and_typed_arrays)
+              - [Keyed collections: Maps, Sets, WeakMaps, WeakSets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?retiredLocale=id#keyed_collections_maps_sets_weakmaps_weaksets)
+
+              ### JavaScript types 2
+
+              #### `String`
+
+              #### Crating String
+
+              ```js
+              const string1 = 'A string primitive';
+              const string2 = 'Also a string primitive';
+              const string3 = `Yet another string primitive`;
+              const string4 = new String('A String object');
+              ```
+
+              #### Character Access
+
+              ```js
+              'cat'.charAt(1); // gives value "a"
+              'cat'[1]; // gives value "a"
+              ```
+
+              #### Comparing strings
+
+              ```js
+              const a = 'a';
+              const b = 'b';
+              if (a < b) {
+                // true
+                console.log(`${a} is less than ${b}`);
+              } else if (a > b) {
+                console.log(`${a} is greater than ${b}`);
+              } else {
+                console.log(`${a} and ${b} are equal.`);
+              }
+              ```
+
+              ```js
+              function areEqualCaseInsensitive(str1, str2) {
+                return str1.toUpperCase() === str2.toUpperCase();
+              }
+              ```
+
+              #### `Number`
+
+              Number adalah objek pembungkus primitif yang digunakan untuk mewakili dan memanipulasi angka seperti 37 atau -9,25. Konstruktor Number berisi konstanta dan metode untuk bekerja dengan angka. Nilai dari tipe lain dapat dikonversi ke angka menggunakan fungsi Number().
+
+              ```js
+              123; // one-hundred twenty-three
+              123.0; // same
+              123 === 123.0; // true
+              ```
+
+              ```js
+              Number('123'); // returns the number 123
+              Number('123') === 123; // true
+
+              Number('unicorn'); // NaN
+              Number(undefined); // NaN
+              ```
+
+              #### `Math`
+
+              Math adalah Build-In Object yang memiliki properti dan metode untuk konstanta dan fungsi matematika. Ini bukan Function Object
+
+              - [Static Properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_properties)
+              - [Static Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id#static_methods)
+            </script>
+          </zero-md>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

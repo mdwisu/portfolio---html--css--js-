@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Detail Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>detail blogs</h1>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>Unix Command Line</h1>
+        <div class="main__content">
+          <script
+            type="module"
+            src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+          ></script>
+
+          <zero-md>
+            <script type="text/markdown">
+              ## 1. Unix Command Line
+
+              ## `pengenalan Unix Command Line`
+
+              ### Command Line Interface (CLI)
+
+              CLI adalah program yang memungkinkan pengguna mengetik perintah teks yang memerintahkan komputer untuk melakukan tugas tertentu
+
+              ### Shell
+
+              - **Shell** adalah Program untuk berkomunikasi dengan sistem operasi
+              - Shell yang berbasis teks disebut Command Line Interface
+
+              ### CLI terminal
+
+              - Terminal Emulator, aplikasi untuk mengakses CLI
+              - contoh CLI
+                - Bash
+                - PowerShell
+                - sh
+                - cmd.exe
+              - Shell Prompt adalah Tempat kita memasukkan command
+
+              ### file system
+
+              Sebuah filesystem mengatur bagaimana data disimpan di dalam sebuah system
+
+              > contoh file system structure
+              > ![Illustration to use for new users](img/file-system.jpg)
+
+              ## `command command Unix`
+
+              ### Struktur Penulisan Command
+
+              ```
+              $ command -options argument
+              ```
+
+              ### Command-command CLI
+
+              - #### clear / ctrl + l<br>
+                untuk membersihkan terminal
+
+              ```
+              $ clear
+              ```
+
+              - #### man<br>
+                untuk melihat penjelasan dan penggunaan dari suatu command
+
+              ```
+              $ man <nama_command>
+              ```
+
+              - #### echo
+                Cetak sesuatu
+
+              ```
+              $ echo -option "<something>"
+              ```
+
+              ### `Navigasi menggunakan CLI`
+
+              - #### pwd<br>
+                melihat lokasi directory saat ini
+
+              ```
+              $ pwd
+              ```
+
+              - #### ls<br>
+                menampilkan semua file
+
+              ```
+              $ ls
+              ```
+
+              menampilkan semua file beserta hidden file
+
+              ```
+              $ ls -a
+              ```
+
+              - #### cd<br>
+
+              ```
+              $ cd ../directory
+              ```
+
+              > catatan : ( cd .. ) untuk naik 1 directory
+
+              ### `Membuat file dan directory`
+
+              - #### touch<br>
+                untuk membuat file
+
+              ```
+              $ touch <nama_file>
+              ```
+
+              - #### mkdir<br>
+                membuat directory baru
+
+              ```
+              $ mkdir <nama_dir>
+              ```
+
+              ### `Melihat isi file`
+
+              - #### head<br>
+                menampilkan beberapa baris awal sebuah file text
+
+              ```
+              $ head -n <namafile>
+              ```
+
+              > -n/-angka untuk banyaknya baris yang ingin ditampilkan
+
+              - #### tail<br>
+                menampilkan beberapa baris akhir sebuah file text
+
+              ```
+              $ tail -n <namafile>
+              ```
+
+              > -n/-angka untuk banyaknya baris yang ingin ditampilkan
+
+              - #### cat
+                melihat seluruh isi sebuah file text
+
+              ```
+              $ cat <nama_file>
+              ```
+
+              ### `Menyalin, memindahkan, menghapus, mengedit, dan files & directory`
+
+              - #### cp<br>
+                untuk mengcopy file dalam directory yang sama
+
+              ```
+              $ cp <nama_file> <new_nama_file>
+              ```
+
+              copy ke dir spesifik
+
+              ```
+              $ cp <nama_file1> <nama_file2> <destination_dir>
+              ```
+
+              copy directory beserta isinya secara rekursif ke dalam directory yang dituju
+
+              ```
+              $ cp -r/R Src_directory Dest_directory
+              ```
+
+              - #### mv<br>
+                rename file
+
+              ```
+              $ mv <nama_file> <nama_file_baru>
+              ```
+
+              memindahkan file
+
+              ```
+              $ mv <nama file> <directory>
+              ```
+
+              - #### rm<br>
+                Remove file
+
+              ```
+              $ rm <file>
+              ```
+
+              remove directory
+
+              ```
+              $ rm -r <directory>
+              ```
+
+              - #### nano
+                untuk membuka editor teks untuk file untuk diedit
+
+              ```
+              nano <file_name>
+              ```
+
+              ---
+
+              ---
+            </script>
+          </zero-md>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

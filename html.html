@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Detail Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>detail blogs</h1>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>HTML</h1>
+        <div class="main__content">
+          <script
+            type="module"
+            src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+          ></script>
+
+          <zero-md>
+            <script type="text/markdown">
+              ## `Pengenalan HTML`
+
+              - HTML adalah singkatan dari Hypertext Markup Language.
+              - HTML digunakan untuk menampilkan konten pada browser.
+              - Ada 2 tools utama yang harus dipersiapkan untuk membuat HTML
+                - Browser
+                - Code Editor
+
+              HTML anatomy  
+              ![Illustration to use for new users](img/struktur-tag.jpg)
+
+              ## `Menjalankan HTML dengan Live Server`
+
+              - buka extension menu di vscode
+              - cari live server di pencariannya
+              - setelah muncul, klik install
+              - dan live server telah diinstall
+                ![Illustration to use for new users](img/live-server.jpg)
+              - buka file html yang ingin ditampilkan
+              - klik kanan pada tampilan html
+              - klik open with live server atau tekan (alt+L alt+O)
+
+                ![Illustration to use for new users](img/open-live-server.jpg)
+
+              - lalu akan menampilkan tampilannya
+
+                ![Illustration to use for new users](img/run-live.jpg)
+
+              ## `sintax popular didalam HTML`
+
+              - HTML Comment
+
+              ```html
+              <!-- ini adalah sintax HTML comment -->
+              ```
+
+              - HTML Line Break
+
+              ```html
+              <br />
+              ```
+
+              - HTML heading
+
+              ```html
+              <h1>heading 1</h1>
+              <h2>heading 2</h2>
+              <h3>heading 3</h3>
+              <h4>heading 4</h4>
+              <h5>heading 5</h5>
+              <h6>heading 6</h6>
+              ```
+
+              - HTML List
+
+              ```html
+              <ul>
+                <li>un-order list 1</li>
+                <li>un-order list 2</li>
+                <li>un-order list 3</li>
+              </ul>
+              <ol>
+                <li>order list 4</li>
+                <li>order list 5</li>
+                <li>order list 6</li>
+              </ol>
+              ```
+
+              - HTML Image
+
+              ```html
+              <img src="Week-1/img/github.jpg" alt="" />
+              ```
+
+              - HTML form (label and input)
+
+              ```html
+              <label for="username">username</label> <input type="text" />
+              ```
+
+              ## `Semantic HTML`
+
+              Semantic HTML sangat membantu untuk developer supaya lebih “Easy to read and understand”
+
+              ```
+              - <article>
+              - <aside>
+              - <details>
+              - <figcaption>
+              - <figure>
+              - <footer>
+              - <header>
+              - <main>
+              - <mark>
+              - <nav>
+              - <section>
+              - <summary>
+              - <time>
+              ```
+
+              ## `deploy HTML`
+
+              ![Illustration to use for new users](img/netlify.jpg)
+
+              - deployed website bisa di netlify
+
+              ## 3. CSS
+
+              ## `Pengenalan CSS`
+
+              - CSS adalah bahasa yang digunakan untuk mendesain halaman website.
+
+              - Dengan CSS, kita bisa mengubah warna, menggunakan font custom, editing text format, mengatur tata letak, dan lainnya.
+
+              ## `Struktur CSS dan comment`
+
+              ```css
+              /* comment */
+              body {
+                property: value;
+              }
+              ```
+            </script>
+          </zero-md>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

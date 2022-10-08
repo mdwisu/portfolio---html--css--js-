@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Detail Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>detail blogs</h1>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>Javascript Dasar</h1>
+        <div class="main__content">
+          <script
+            type="module"
+            src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+          ></script>
+
+          <zero-md>
+            <script type="text/markdown">
+              Javascript adalah bahasa pemograman yang sangat powerful yang digunakan untuk logic pada sebuah website
+
+              Peserta mampu memahami peran JavaScript pada web development
+
+              ## `Menjalankan JavaScript`
+
+              Javascript dijalankan melalui browser pada device setiap user seperti
+
+              - Google Chrome
+              - Microsoft Edge
+              - Modzilla Firefox
+              - Safari
+
+              ## `Syntax dan Statement JavaScript`
+
+              ## `Tipe data pada javasctipt`
+
+              - number
+                Tipe data number adalah tipe data yang mengandung semua angka termasuk angka desimal.
+
+              - string
+                Tipe data string adalah grup karakter yang ada pada keyboard laptop/PC kita yaitu letters (huruf), number (angka), spaces (spasi), symbol, dan lainnya.
+
+              - boolean
+                Tipe data boolean adalah tipe data yang hanya mempunyai 2 buah nilai.
+                2 buah nilai tersebut adalah TRUE (benar) or FALSE (salah).
+
+              - null
+                Tipe data null adalah tipe data yang diartikan bahwa sebuah variable/data tidak memiliki nilai.
+
+              - undefined
+                Tipe data undefined adalah tipe data yang merepresentasikan varibel/data yang tidak memiliki nilai.
+
+              - object
+                Tipe data object adalah koleksi data yang saling berhubungan (related). Tipe data pbject dapat menyimpan data dengan tipe data apapun (number, string, boolean, dan lainnya)
+
+              ## `Variable pada javasctipt`
+
+              variable adalah container/tempat untuk menyimpan sebuah nilai
+
+              Ada 3 cara mendefinisikan sebuah variabel.
+
+              ```js
+              var variable1
+              // let dikenalkan pada versi javascript terbaru ES6
+              // Variabel let mendukung kaidah global variabel dan local variabel
+              // dianjurkan untuk menggunak let untuk variabel yang dinamis/dapat diubah.
+              let variable2
+              // Gunakan const jika variabel tidak dapat diubah nilainya
+              const variable3
+              ```
+
+              ## `Operator pada javasctipt`
+
+              Assignment Operator (=)
+              Assignment operator digunakan untuk menyimpan sebuah nilai pada variabel
+
+              - Mathematical Assignment Operator
+
+                - \+=
+                - \-=
+                - \*=
+                - \/=
+                - %=
+
+              - Increment dan Decrement
+
+                Gunakan increment atau decrement untuk menambah atau mengurangi sebesar 1 nilai.
+
+                - i++
+                - i--
+
+              - Arithmetic Operator
+
+                - Tambah (+)
+                - Kuramg (-)
+                - Perkalian (\*)
+                - Pembagian (/)
+                - Modulus (%)
+
+              - Comparison Operator
+
+                - Lebih kecil dari : <
+                - Lebih besar dari: >
+                - Lebih kecil atau sama dengan: <=
+                - Lebih besar atau sama dengan: >=
+                - Sama dengan: ===
+                - Tidak sama dengan: !==
+
+              - Logical Operator
+
+                - AND operator : &&
+                - OR operator: ||
+                - NOT operator: !
+
+              - looping
+
+              ```js
+              const cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi'];
+
+              let text = '';
+              for (let i = 0; i < cars.length; i++) {
+                console.log(cars[i]);
+              }
+              ```
+
+              ![Illustration to use for new users](img/asdf.jpg)
+            </script>
+          </zero-md>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

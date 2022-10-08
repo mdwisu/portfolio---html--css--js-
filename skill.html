@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <h1>Muhammad Dwi Susanto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="skills">
+      <h1
+        style="
+          font-size: 50px;
+          width: 100%;
+          margin: 30px 0;
+          text-align: center;
+        "
+      >
+        My Skills
+      </h1>
+      <div class="skill">
+        <div class="skill_top">
+          <img src="img/html.png" alt="" />
+          <h1>HTML</h1>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill_top">
+          <img src="img/css.png" alt="" />
+          <h1>CSS</h1>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill_top">
+          <img src="img/js.png" alt="" />
+          <h1 style="font-size: 40px;">Javascript</h1>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill_top">
+          <img src="img/node.png" alt="" />
+          <h1>Node Js</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

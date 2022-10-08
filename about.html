@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <h1>Muhammad Dwi Susanto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <!-- about section -->
+    <div class="main__section">
+      <div class="main__container">
+        <h1>hello, I'm Dwi!</h1>
+        <div class="main__content">
+          <div class="main__text">
+            <h2>
+              I am Muhammad Dwi Susanto, a Backend Developer cuttently living in
+              Bogor, Indonesia
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+              sunt ducimus, delectus asperiores eaque expedita blanditiis rem
+              unde odio temporibus voluptas quas dolorem qui, vero repellendus
+              illo inventore ipsum. Accusamus.
+            </p>
+            <h2>
+              I am Muhammad Dwi Susanto, a Backend Developer cuttently living in
+              Bogor, Indonesia
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+              sunt ducimus, delectus asperiores eaque expedita blanditiis rem
+              unde odio temporibus voluptas quas dolorem qui, vero repellendus
+              illo inventore ipsum. Accusamus.
+            </p>
+            <h2>
+              I am Muhammad Dwi Susanto, a Backend Developer cuttently living in
+              Bogor, Indonesia
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+              sunt ducimus, delectus asperiores eaque expedita blanditiis rem
+              unde odio temporibus voluptas quas dolorem qui, vero repellendus
+              illo inventore ipsum. Accusamus.
+            </p>
+            <h2>
+              I am Muhammad Dwi Susanto, a Backend Developer cuttently living in
+              Bogor, Indonesia
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+              sunt ducimus, delectus asperiores eaque expedita blanditiis rem
+              unde odio temporibus voluptas quas dolorem qui, vero repellendus
+              illo inventore ipsum. Accusamus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <h1>Get In Touch</h1>
+        <p>
+          Feel free to email me about anything. Do you have some feedback or
+          suggestions?
+        </p>
+        <p>You can also reach me around the web: GitHub, Twitter</p>
+        <button id="sayhello">Say Hello</button>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2020 - 2022 Muhammad Dwi Susanto. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      let subject = 'Hello Muhammad Dwi Susanto';
+      let subjectEncoded = encodeURIComponent(subject);
+      document.getElementById('sayhello').onclick = () =>
+        (location.href =
+          'mailto:dwisusanto784@gmail.com?subject=' + subjectEncoded);
+    </script>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
